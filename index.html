@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OX / OBM デジタル放送送信場 - 共同投稿＆素材提供ポータル</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+        }
+
+        body {
+            background-color: #101012;
+            color: #e3e3e6;
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #1a1a20 0%, #252530 100%);
+            padding: 25px;
+            text-align: center;
+            border-bottom: 3px solid #00bcff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 24pt;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo-ox { color: #ffffff; }
+        .logo-ox span { color: #ff4500; }
+        .logo-split { color: #555; font-size: 18pt; }
+        .logo-obm { color: #00bcff; }
+
+        .tagline {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* メインレイアウト */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .grid {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* 局ごとのエリア */
+        .station-column {
+            flex: 1;
+            min-width: 340px;
+        }
+
+        /* 局のヘッダー看板 */
+        .station-banner {
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            font-size: 14pt;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .banner-ox {
+            background: linear-gradient(to right, #ff4500, #b33000);
+            color: #fff;
+        }
+
+        .banner-obm {
+            background: linear-gradient(to right, #00bcff, #007cb3);
+            color: #fff;
+        }
+
+        /* カードのベース */
+        .card {
+            background-color: #16161a;
+            border: 1px solid #2a2a32;
+            border-radius: 0 0 8px 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        h3 {
+            font-size: 11pt;
+            color: #fff;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3a3a45;
+        }
+
+        /* 投稿用ボタン */
+        .btn-post-trigger {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 12pt;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .btn-ox-color { background-color: #ff4500; }
+        .btn-obm-color { background-color: #00bcff; }
+        .btn-post-trigger:hover { opacity: 0.9; }
+
+        /* 素材リスト */
+        .material-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .material-item {
+            background-color: #202026;
+            border: 1px solid #32323d;
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .material-name {
+            font-size: 10pt;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .material-desc {
+            font-size: 8.5pt;
+            color: #909095;
+            margin-bottom: 8px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #32323d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 8pt;
+            font-weight: bold;
+        }
+
+        .btn-download:hover { background-color: #424252; }
+
+        footer {
+            text-align: center;
+            font-size: 9pt;
+            color: #555;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-ox">TOKYO <span>OX</span></div>
+            <div class="logo-split">×</div>
+            <div class="logo-obm">OBM</div>
+        </div>
+        <div class="tagline">📡 OX / OBM デジタル放送送信場</div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+
+            <div class="station-column">
+                <div class="station-banner banner-ox">🗼 TOKYO OX（東京）</div>
+                <div class="card">
+                    <h3>【視聴者投稿窓口】</h3>
+                    <a href="ここにTOKYO_OX用のGoogleフォームURL" target="_blank" class="btn-post-trigger btn-ox-color">
+                        TOKYO OX に動画・写真を送る
+                    </a>
+                    
+                    <h3 style="margin-top: 25px;">【OX限定 配布素材】</h3>
+                    <div class="material-list">
+                        <div class="material-item">
+                            <div class="material-name">📺 OXお天気カメラ風 背景映像</div>
+                            <div class="material-desc">東京タワーや新宿高層ビル群をイメージした、都会的なお天気カメラ映像素材。</div>
+                            <a href="#" class="btn-download" onclick="alert('TOKYO OX素材のダウンロード準備中'); return false;">ダウンロード</a>
+                        </div>
+                        <div class="material-item">
+                            <div class="material-name">🎵 現代風 緊急放送チャイム音</div>
+                            <div class="material-desc">ニュース速報や緊急放送が入る直前の、洗練されたピピピ音。</div>
+                            <a href="#" class="btn-download" onclick="alert('TOKYO OX素材のダウンロード準備中'); return false;">ダウンロード</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="station-column">
+                <div class="station-banner banner-obm">♨️ OBM 大分ベータメディア</div>
+                <div class="card">
+                    <h3>【視聴者投稿窓口】</h3>
+                    <a href="ここにOBM用のGoogleフォームURL" target="_blank" class="btn-post-trigger btn-obm-color">
+                        OBM に動画・写真を送る
+                    </a>
+                    
+                    <h3 style="margin-top: 25px;">【OBM限定 配布素材】</h3>
+                    <div class="material-list">
+                        <div class="material-item">
+                            <div class="material-name">📼 1984年風 ブルーバック静止画</div>
+                            <div class="material-desc">あの伝説の放送事故を完全再現できる「提供 大分放送」風のレトロ明朝体ベース。</div>
+                            <a href="#" class="btn-download" onclick="alert('OBM素材のダウンロード準備中'); return false;">ダウンロード</a>
+                        </div>
+                        <div class="material-item">
+                            <div class="material-name">📶 1kHz 同期乱れ用ピー音＆ノイズ</div>
+                            <div class="material-desc">画面が乱れてカラーバーになった瞬間に流れる、アナログ感たっぷりのトラウマ音源。</div>
+                            <a href="#" class="btn-download" onclick="alert('OBM素材のダウンロード準備中'); return false;">ダウンロード</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            &copy; 2026 TOKYO OX & OBM Broadcasting Network Services.
+        </footer>
+    </div>
+
+</body>
+</html>
